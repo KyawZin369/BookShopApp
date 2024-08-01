@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="/style.css")
+
+    body
+      header
+        ul
+          li
+            a(href="/") Products
+          li
+            a(href="admin/add-product") Add Your Products
+      section
+        h1 Book List
+        each product in prods
+          ul.product-list
+            li.product-card
+              img(src="https://shorturl.at/iJWnI", alt="Book 1 Cover")
+              .product-info
+                h2 #{product}
+                p Book 1 description goes here. This is a brief overview of what the book is about, including its main themes and appeal.
+
