@@ -6,7 +6,7 @@ const shopRouter = express.Router();
 
 shopRouter.get('/',(req,res,next)=>{
     const product = adminData.products
-    res.render('shop' , {prods : product , title : "Book List" })
+    res.render('shop' , {prods : product , pageTitle : "Book List" , path : '/'})
 })
 
 module.exports = shopRouter;

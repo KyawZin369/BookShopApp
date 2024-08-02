@@ -1,17 +1,9 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Add Product
+extends layout/page-layout.pug 
+
+block styles
     link(rel="stylesheet", href="/style.css")
-  body
-    header
-      ul
-        li
-          a(href="/") Products
-        li
-          a(href="admin/add-product") Add Your Products
+
+block main 
     section
       form(action="product" method="POST")
         input(type="text" name="title" placeholder="Enter product title")
